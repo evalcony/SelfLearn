@@ -5,9 +5,11 @@ package com.eval.concurrent;
  */
 public class ThreadTest {
     public static void main(String[] args) {
+
+        final Count count = new Count();
+
         Runnable runnable = new Runnable() {
             public void run() {
-                Count count = new Count();
                 count.count();
             }
         };
